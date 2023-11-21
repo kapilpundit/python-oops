@@ -31,7 +31,7 @@ item1.apply_discount()
 print(item1.price)
 
 item2 = Item("Laptop", 1000, 3)
-# Update the pay_rate Class Attribte here
+# Update the pay_rate Class Attribute here
 item2.pay_rate = 0.7
 item2.apply_discount()
 print(item2.price)
