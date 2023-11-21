@@ -1,4 +1,8 @@
 class Item:
+    # Define a class attribute
+    # This attribute is shared amongst all the instances of the class
+    pay_rate = 0.8 # The pay rate after 20% discount
+    
     '''
     Ref: https://www.youtube.com/watch?v=Ej_02ICOIgs&t=1977s
     Define the constructor with _init__() method
@@ -11,6 +15,7 @@ class Item:
         assert quantity >= 0, f"Quantity {price} is not greater than or equal to 0"
         
         # Assign object properties to self
+        # Also called as INSTANCE ATTRIBUTES
         self.name = name
         self.price = price
         self.quantity = quantity
@@ -19,8 +24,4 @@ class Item:
         return self.price * self.quantity
     
 
-item1 = Item("Mobile", 300, 2)
-print(item1.calculate_total_price())
-
-item1 = Item("Laptop", 1500, 3)
-print(item1.calculate_total_price())
+print(Item.pay_rate)
