@@ -25,7 +25,14 @@ class Item:
     
 item1 = Item("Mobile", 300, 2)
 item2 = Item("Laptop", 1500, 3)
-# Accessing Class Attributes
+
+# Ways of aAccessing Class Attributes
 print(Item.pay_rate)
 print(item1.pay_rate)
-print(item2.pay_rate)
+# print(item2.pay_rate)
+
+# Get all the attributes on the class level
+print(Item.__dict__)
+
+# Get all the attributes on the instance level
+print(item1.__dict__)
