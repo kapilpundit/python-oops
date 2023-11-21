@@ -22,5 +22,5 @@ class Item:
 item1 = Item("Mobile", 300, 2)
 print(item1.calculate_total_price())
 
-item1 = Item("Laptop", 1500, 3)
-print(item1.calculate_total_price())
+item2 = Item("Laptop", 1500, 3)
+print(item2.calculate_total_price())

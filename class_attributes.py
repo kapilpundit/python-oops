@@ -23,5 +23,9 @@ class Item:
     def calculate_total_price(self):
         return self.price * self.quantity
     
-
+item1 = Item("Mobile", 300, 2)
+item2 = Item("Laptop", 1500, 3)
+# Accessing Class Attributes
 print(Item.pay_rate)
+print(item1.pay_rate)
+print(item2.pay_rate)
