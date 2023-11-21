@@ -13,7 +13,7 @@ class Item:
         return self.price * self.quantity
     
 
-item1 = Item("Mobile", "300", "2")
+item1 = Item("Mobile", 300, 2)
 print(item1.calculate_total_price())
 
 item1 = Item("Laptop", 1500, 3)
