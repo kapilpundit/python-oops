@@ -22,13 +22,19 @@ class Item:
         self.quantity = quantity
         
         # Actions to execute
-        self.all.append(self)
+        Item.all.append(self)
 
     def calculate_total_price(self):
         return self.price * self.quantity
     
     def apply_discount(self):
         self.price = self.price * self.pay_rate
+        
+    def __repr__(self):
+        return f"Item('{self.name}, {self.price}, {self.quantity}')"
+        
+    def __str__(self):
+        return f"Item('{self.name}, {self.price}, {self.quantity}')"
     
 item1 = Item("Phone", 100, 1)
 item2 = Item("Laptop", 1000, 3)
@@ -36,6 +42,14 @@ item3 = Item("Cable", 10, 5)
 item4 = Item("Mouse", 50, 5)
 item5 = Item("Keyboard", 75, 5)
 
+# print only one object/instance
+# __str__ is being used here
+print(item5)
+
+# Print all objects of item class
+# __repr__ is being used here
+print(Item.all)
+
 # Print name attribute of all the instances
-for inst in Item.all:
-    print(inst.name)
+# for inst in Item.all:
+#     print(inst.name)
