@@ -2,6 +2,7 @@ class Item:
     # Define a class attribute
     # This attribute is shared amongst all the instances of the class
     pay_rate = 0.8 # The pay rate after 20% discount
+    all = []
     
     '''
     Ref: https://www.youtube.com/watch?v=Ej_02ICOIgs&t=1977s
@@ -19,6 +20,9 @@ class Item:
         self.name = name
         self.price = price
         self.quantity = quantity
+        
+        # Actions to execute
+        self.all.append(self)
 
     def calculate_total_price(self):
         return self.price * self.quantity
@@ -26,12 +30,12 @@ class Item:
     def apply_discount(self):
         self.price = self.price * self.pay_rate
     
-item1 = Item("Mobile", 100, 2)
-item1.apply_discount()
-print(item1.price)
-
+item1 = Item("Phone", 100, 1)
 item2 = Item("Laptop", 1000, 3)
-# Update the pay_rate Class Attribute here (instance attribute)
-item2.pay_rate = 0.7
-item2.apply_discount()
-print(item2.price)
+item3 = Item("Cable", 10, 5)
+item4 = Item("Mouse", 50, 5)
+item5 = Item("Keyboard", 75, 5)
+
+# Print name attribute of all the instances
+for inst in Item.all:
+    print(inst.name)
