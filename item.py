@@ -83,3 +83,25 @@ class Item:
         
     def __str__(self):
         return f"Item('{self.name}, {self.price}, {self.quantity}')"
+    
+    def __connect(self, smtp_server):
+        print(f"Connected to SMTP server {smtp_server}")
+
+    def __prepare_email(self, to, sender = ''):
+        print(f'''
+            Hi {to}
+              We have {self.__name} {self.price} times"
+            Regards,
+            {sender}
+              ''')
+        
+    def __send_email(self):
+        print("Email sent!")
+    
+    def send_email(self):
+        '''
+        Send information about item through email
+        '''
+        self.__connect("Gmail")
+        self.__prepare_email("Jim", "Kapil")
+        self.__send_email()
