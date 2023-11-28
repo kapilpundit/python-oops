@@ -42,6 +42,11 @@ class Item:
         private member through an instance
         Ex. item1.name = "Other name"
         '''
+
+        # Restrict name to value upto 10 characters
+        if len(value) > 10:
+            raise Exception("The value of name should be upto 10 characters")
+        
         print(f"Updating name attribute's value to '{value}'")
         self.__name = value
 
